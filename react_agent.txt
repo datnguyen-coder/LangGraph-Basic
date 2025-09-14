@@ -1,0 +1,23 @@
+#! Annotated - provides additional context/information without affecting the type itself
+                   [data type, metadata]
+# email = Annotated[str, "This has to be a valid email format!"]
+
+# print(email.__metadata__)
+
+#! Sequence - to automatically handle the state updates for sequences such as by adding new messages to a chat history
+
+#! Reducer Function 
+# Rule that controls how updates from nodes are combined with the existing state
+# Tells us how to merge new data into the current state
+
+# without a reducer, updates would have replaced the existing value entirely
+
+#~ Without a reducer
+# state = {"messages": ["Hi!"]}
+# update = {"messages": ["Nice to meet you!"]}
+# new_state = {"messages": ["Nice to meet you!"]}
+
+#~ With a reducer
+# state = {"messages": ["Hi!"]}
+# update = {"messages": ["Nice to meet you!"]}
+# new_state = {"messages": ["Hi!", "Nice to meet you!"]}
